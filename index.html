@@ -87,11 +87,32 @@
         <div class="col">
           <div class="d-flex flex-column debug list-users">
             <div class="p-2">testa della zona messaggi</div>
-            <div class="p-2 Scorrimento debug">
-              <div class="msg-mine">MESSAGGIO MIO</div>
-              <div class="msg-other">MESSAGGIO ALTRO</div>
+            <div class="my-2 p-2 Scorrimento debug">
+              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
+              <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
+              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
+              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
+              <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
             </div>
-            <div class="mt-auto p-2">zona inserimento messaggi</div>
+            <!-- dove immetterò le nuove task -->
+            <div class="input-group mt-auto" id="insert-new-msg">
+              <input
+                type="text"
+                class="form-control"
+                placeholder=" devi fare altro? "
+                aria-describedby="button-addon2"
+              />
+              <!-- v-model="newTodo.text"
+                @keyup.enter="addTask()" -->
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                <!-- @click="addTask()" -->
+                Button
+              </button>
+            </div>
           </div>
         </div>
       </div>

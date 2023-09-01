@@ -28,16 +28,24 @@
 .Scorrimento {
   overflow: auto;
 }
+.msg-all {
+  max-width: 70%;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 .msg-mine {
-  max-width: 70%;
   background-color: greenyellow;
   margin: 10px 0;
   margin-left: auto;
 }
 
 .msg-other {
-  max-width: 70%;
   background-color: gainsboro;
   margin-right: auto;
+}
+
+#insert-new-msg {
+  width: 90%;
+  margin: 0 auto;
 }
