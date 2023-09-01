@@ -69,35 +69,14 @@
 
             <div class="Scorrimento">
               <div class="p-2 debug">{{ contacts[0].name}}</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2 debug">{{ contacts[3].name + " weeeeee"}}</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente yyy</div>
-              <div class="p-2">utente ultimo +++++++</div>
+
+              <div
+                v-for="(user,index) in contacts"
+                class="p-2 d-flex align-items-center"
+              >
+                <div class="user-icon">faccia</div>
+                <div class="user-name">{{ user.name}}</div>
+              </div>
             </div>
           </div>
         </div>
