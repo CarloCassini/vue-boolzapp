@@ -46,7 +46,26 @@
           <div class="d-flex flex-column debug list-users">
             <div class="p-2">testa della zona user</div>
             <div class="p-2 debug">zona con la parte azzurra</div>
-            <div class="p-2">ricerca utente</div>
+
+            <!-- dove mettere la ricerca utente -->
+            <div class="input-group my-2" id="insert-new-msg">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                <!-- @click="addTask()" -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=" cerca utente "
+                aria-describedby="button-addon2"
+              />
+              <!-- v-model="newTodo.text"
+                @keyup.enter="addTask()" -->
+            </div>
 
             <div class="Scorrimento">
               <div class="p-2 debug">{{ contacts[0].name}}</div>
@@ -94,12 +113,17 @@
               <div class="msg-all msg-mine">MESSAGGIO MIO</div>
               <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
             </div>
-            <!-- dove immetterò le nuove task -->
+            <!-- dove scriverò i nuovi messaggi -->
             <div class="input-group mt-auto" id="insert-new-msg">
+              <button class="btn btn-outline-secondary mx-2" type="button">
+                <!-- @click="addTask()" -->
+                <i class="fa-regular fa-face-smile"></i>
+              </button>
+
               <input
                 type="text"
                 class="form-control"
-                placeholder=" devi fare altro? "
+                placeholder=" scrivi messaggio.. "
                 aria-describedby="button-addon2"
               />
               <!-- v-model="newTodo.text"
@@ -110,7 +134,12 @@
                 id="button-addon2"
               >
                 <!-- @click="addTask()" -->
-                Button
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <!-- microfono -->
+              <button class="btn btn-outline-secondary mx-2" type="button">
+                <!-- @click="addTask()" -->
+                <i class="fa-solid fa-microphone"></i>
               </button>
             </div>
           </div>
