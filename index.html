@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BooZapp</title>
 
+    <!-- inserisco font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- inserisco collegamento a  Bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -26,19 +35,59 @@
     <!-- style -->
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body class="background-page">
     <!-- questo div sarà di background -->
-    <div>
-      <div class="debug container app-display" id="app">
-        <div class="row text-center">
-          <!-- visualizzazione contatti -->
-          <div class="col-3">
-            <h1 class="text-center">{{ contacts[0].name}}</h1>
-          </div>
+    <div class="debug container app-display" id="app">
+      <div class="row">
+        <!-- visualizzazione contatti -->
+        <div class="col-3">
+          <div class="d-flex flex-column debug list-users">
+            <div class="p-2">testa della zona user</div>
+            <div class="p-2 debug">zona con la parte azzurra</div>
+            <div class="p-2">ricerca utente</div>
 
-          <!-- visualizzazione messaggi -->
-          <div class="col-9">
-            <h1 class="text-center">colonna2</h1>
+            <div class="overf">
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente xxx</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente yyy</div>
+              <div class="p-2">utente ultimo +++++++</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- visualizzazione contatti -->
+        <div class="col">
+          <div class="d-flex flex-column debug list-users">
+            <div class="p-2">testa della zona messaggi</div>
+            <div class="p-2 debug">MESSAGGI DEGLI UTENTI</div>
+            <div class="mt-auto p-2 debug">zona inserimento messaggi</div>
           </div>
         </div>
       </div>
