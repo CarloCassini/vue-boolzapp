@@ -28,3 +28,16 @@
 .Scorrimento {
   overflow: auto;
 }
+
+.msg-mine {
+  max-width: 70%;
+  background-color: greenyellow;
+  margin: 10px 0;
+  margin-left: auto;
+}
+
+.msg-other {
+  max-width: 70%;
+  background-color: gainsboro;
+  margin-right: auto;
+}
