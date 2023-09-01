@@ -30,6 +30,7 @@
     ></script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="./js/data.js" defer></script>
     <script src="./js/main.js" defer></script>
 
     <!-- style -->
@@ -48,6 +49,7 @@
             <div class="p-2">ricerca utente</div>
 
             <div class="overf">
+              <div class="p-2">{{ contacts[0].name}}</div>
               <div class="p-2">utente xxx</div>
               <div class="p-2">utente xxx</div>
               <div class="p-2">utente xxx</div>
@@ -58,8 +60,7 @@
               <div class="p-2">utente xxx</div>
               <div class="p-2">utente xxx</div>
               <div class="p-2">utente xxx</div>
-              <div class="p-2">utente xxx</div>
-              <div class="p-2">utente yyy</div>
+              <div class="p-2">{{ contacts[0].name + " weeeeee"}}</div>
               <div class="p-2">utente yyy</div>
               <div class="p-2">utente yyy</div>
               <div class="p-2">utente yyy</div>
