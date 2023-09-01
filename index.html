@@ -26,14 +26,20 @@
     <!-- style -->
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div class="container m-3" id="app">
-      <div class="row text-center">
-        <div class="col-3">
-          <h1 class="debug text-center text-danger">{{ contacts[0].name}}</h1>
-        </div>
-        <div class="col-9">
-          <h1 class="debug text-center text-danger">colonna2</h1>
+  <body class="background-page">
+    <!-- questo div sarà di background -->
+    <div>
+      <div class="debug container app-display" id="app">
+        <div class="row text-center">
+          <!-- visualizzazione contatti -->
+          <div class="col-3">
+            <h1 class="text-center">{{ contacts[0].name}}</h1>
+          </div>
+
+          <!-- visualizzazione messaggi -->
+          <div class="col-9">
+            <h1 class="text-center">colonna2</h1>
+          </div>
         </div>
       </div>
     </div>
