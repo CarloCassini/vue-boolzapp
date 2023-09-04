@@ -70,7 +70,8 @@
             <div class="Scorrimento">
               <div
                 v-for="(user,index) in contacts"
-                class="p-2 d-flex align-items-center"
+                class="p-2 d-flex align-items-center contact-search"
+                @click="selectUser(index)"
               >
                 <img
                   :src="user.avatar.replace('.png','.jpg')"
@@ -84,10 +85,22 @@
           </div>
         </div>
 
-        <!-- visualizzazione contatti -->
+        <!-- visualizzazione zona dei messaggi -->
         <div class="col">
           <div class="d-flex flex-column debug list-users">
-            <div class="p-2">testa della zona messaggi</div>
+            <!-- testa della zona messaggi -->
+            <div class="p-2">
+              <div class="display-Zone p-2 d-flex align-items-center">
+                <img
+                  :src="contacts[activeContact].avatar.replace('.png','.jpg')"
+                  class="user-icon"
+                  alt=""
+                />
+                <!-- <div class="user-icon">faccia</div> -->
+                <div class="user-name">{{ contacts[activeContact].name}}</div>
+              </div>
+            </div>
+
             <div class="my-2 p-2 Scorrimento debug">
               <div class="msg-all msg-mine">MESSAGGIO MIO</div>
               <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
@@ -95,8 +108,9 @@
               <div class="msg-all msg-mine">MESSAGGIO MIO</div>
               <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
             </div>
+
             <!-- dove scriverò i nuovi messaggi -->
-            <div class="input-group mt-auto" id="insert-new-msg">
+            <div class="display-Zone input-group mt-auto" id="insert-new-msg">
               <button class="btn btn-outline-secondary mx-2" type="button">
                 <!-- @click="addTask()" -->
                 <i class="fa-regular fa-face-smile"></i>

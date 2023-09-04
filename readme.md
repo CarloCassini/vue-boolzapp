@@ -7,7 +7,7 @@ dall’interlocutore (bianco) assegnando due classi CSS diverse (fatto)
 ● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
 nome e immagine di ogni contatto
 
-### milestone 1 - svolgimento
+### svolgimento milestone 1
 
 - replicare la frafica (fatto in maniere molto basica per concentrarmi sulla logica)
 - visualizzare al lista dei contatti (fatto)
@@ -20,6 +20,12 @@ nome e immagine di ogni contatto
 ● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
 messaggi relativi al contatto attivo all’interno del pannello della conversazione
 ● Click sul contatto mostra la conversazione del contatto cliccato
+
+### svolgimento milestone 2
+
+- distinguo il contatto attivo passando l'index della riga interessata in "activeContact". per comodità sarà sempre il primo all'apertura della pagina.
+  - al click activeContact cambia con quello selezionato
+  - al click la riga di riferimento nella zona di ricerca contatto rimane selezionato.
 
 ## Milestone 3
 

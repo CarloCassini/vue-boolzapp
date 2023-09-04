@@ -6,10 +6,14 @@ createApp({
   data() {
     return {
       contacts: dataDoc,
+      activeContact: 0,
     };
   },
 
   methods: {
+    selectUser(index) {
+      this.activeContact = index;
+    },
     // inserire i metodi qui
   },
 
