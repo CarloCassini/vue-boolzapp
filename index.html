@@ -61,7 +61,8 @@
                 type="button"
                 id="button-addon2"
               >
-                <!-- @click="addTask()" -->
+                <!-- v-model="newMessage.message"
+              @keyup.enter="addTask()" -->
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               <input
@@ -70,8 +71,7 @@
                 placeholder=" cerca utente "
                 aria-describedby="button-addon2"
               />
-              <!-- v-model="newTodo.text"
-                @keyup.enter="addTask()" -->
+              <!-- @keyup.enter="addTask()" -->
             </div>
 
             <div class="Scorrimento">
@@ -112,7 +112,8 @@
               <!-- bisnoga mettere un controllo per l'utilizzo di msg-mine o msg-other -->
               <div
                 v-for="(visibleMessage,index) in contacts[activeContact].messages"
-                class="msg-all msg-mine"
+                class="msg-all"
+                :class="(visibleMessage.status=='sent')? 'msg-mine' : 'msg-other' "
               >
                 <div>{{ visibleMessage.date}}</div>
                 <div>{{ visibleMessage.message}}</div>
@@ -134,9 +135,9 @@
                 class="form-control"
                 placeholder=" scrivi messaggio.. "
                 aria-describedby="button-addon2"
+                v-model="newMessage.message"
+                @keyup.enter="answerMsg(activeContact)"
               />
-              <!-- v-model="newTodo.text"
-                @keyup.enter="addTask()" -->
               <button
                 class="btn btn-outline-secondary"
                 type="button"

@@ -15,7 +15,7 @@ nome e immagine di ogni contatto
   - sostituisco il link dell'immagine di claudia con l'avatar giusto (chiedo al designer)
   - chiamo il metodo replace per sostituire ".png" con ".jpg" considerato che si tratta dell'estensione corretta dei file che ci vengono passati
 
-## Milestone 2
+## Milestone 2 (fatto) !!!inaerire la modifica della classe in base a una variabile
 
 ● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
 messaggi relativi al contatto attivo all’interno del pannello della conversazione
@@ -26,6 +26,7 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
 - distinguo il contatto attivo passando l'index della riga interessata in "activeContact". per comodità sarà sempre il primo all'apertura della pagina.
   - al click activeContact cambia con quello selezionato
   - al click la riga di riferimento nella zona di ricerca contatto rimane selezionato.
+- al click di un contatto mostro la sua conversazione
 
 ## Milestone 3
 
