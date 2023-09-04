@@ -28,7 +28,7 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
   - al click la riga di riferimento nella zona di ricerca contatto rimane selezionato.
 - al click di un contatto mostro la sua conversazione
 
-## Milestone 3
+## Milestone 3 (fatto)
 
 ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
 “enter” il testo viene aggiunto al thread sopra, come messaggio verde

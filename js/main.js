@@ -21,26 +21,26 @@ createApp({
       this.activeContact = index;
     },
 
-    answerMsg(index) {
-      this.mineMsg(index);
-      this.timeout = setTimeout(this.otherMsg(index), 2000);
+    answerMsg() {
+      this.mineMsg();
+      setTimeout(this.otherMsg, 1000);
     },
 
-    mineMsg(index) {
+    mineMsg() {
       this.newMessage.date = new Date();
       this.newMessage.status = "sent";
       const newToAdd = { ...this.newMessage };
-      this.contacts[index].messages.push(newToAdd);
+      this.contacts[this.activeContact].messages.push(newToAdd);
       this.newMessage.message = "";
       this.newMessage.status = "";
     },
-    otherMsg(index) {
+    otherMsg() {
       console.log("asdasd");
       this.newMessage.date = new Date();
       this.newMessage.message = "ok";
       this.newMessage.status = "received";
       const newToAdd = { ...this.newMessage };
-      this.contacts[index].messages.push(newToAdd);
+      this.contacts[this.activeContact].messages.push(newToAdd);
       this.newMessage.message = "";
       this.newMessage.status = "";
     },
