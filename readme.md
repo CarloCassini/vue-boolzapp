@@ -3,9 +3,15 @@
 ## Milestone 1
 
 ● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
-dall’interlocutore (bianco) assegnando due classi CSS diverse
+dall’interlocutore (bianco) assegnando due classi CSS diverse (fatto)
 ● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
 nome e immagine di ogni contatto
+
+### milestone 1 - svolgimento
+
+- replicare la frafica (fatto in maniere molto basica per concentrarmi sulla logica)
+- visualizzare al lista dei contatti (fatto)
+  -collegare le immagini dei contatti con la foto
 
 ## Milestone 2
 

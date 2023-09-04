@@ -68,13 +68,16 @@
             </div>
 
             <div class="Scorrimento">
-              <div class="p-2 debug">{{ contacts[0].name}}</div>
-
               <div
                 v-for="(user,index) in contacts"
                 class="p-2 d-flex align-items-center"
               >
-                <div class="user-icon">faccia</div>
+                <img
+                  :src="user.avatar.replace('.png','.jpg')"
+                  class="user-icon"
+                  alt=""
+                />
+                <!-- <div class="user-icon">faccia</div> -->
                 <div class="user-name">{{ user.name}}</div>
               </div>
             </div>
