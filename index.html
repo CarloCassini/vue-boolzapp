@@ -42,9 +42,16 @@
     <div class="debug container app-display" id="app">
       <div class="row">
         <!-- visualizzazione contatti -->
+        <!-- user mio -->
         <div class="col-3">
           <div class="d-flex flex-column debug list-users">
-            <div class="p-2">testa della zona user</div>
+            <div class="p-2">
+              <div class="display-Zone p-2 d-flex align-items-center">
+                <img src="img/avatar_io.jpg" class="user-icon" alt="" />
+                <div class="user-name">Carlo</div>
+              </div>
+            </div>
+
             <div class="p-2 debug">zona con la parte azzurra</div>
 
             <!-- dove mettere la ricerca utente -->
@@ -88,7 +95,7 @@
         <!-- visualizzazione zona dei messaggi -->
         <div class="col">
           <div class="d-flex flex-column debug list-users">
-            <!-- testa della zona messaggi -->
+            <!-- testa della zona messaggi con user attivo-->
             <div class="p-2">
               <div class="display-Zone p-2 d-flex align-items-center">
                 <img
@@ -96,17 +103,23 @@
                   class="user-icon"
                   alt=""
                 />
-                <!-- <div class="user-icon">faccia</div> -->
                 <div class="user-name">{{ contacts[activeContact].name}}</div>
               </div>
             </div>
 
+            <!-- zona del display dei messaggi -->
             <div class="my-2 p-2 Scorrimento debug">
-              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
-              <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
-              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
-              <div class="msg-all msg-mine">MESSAGGIO MIO</div>
-              <div class="msg-all msg-other">MESSAGGIO ALTRO</div>
+              <!-- bisnoga mettere un controllo per l'utilizzo di msg-mine o msg-other -->
+              <div
+                v-for="(visibleMessage,index) in contacts[activeContact].messages"
+                class="msg-all msg-mine"
+              >
+                <div>{{ visibleMessage.date}}</div>
+                <div>{{ visibleMessage.message}}</div>
+              </div>
+
+              <!-- <div class="msg-all msg-mine">MESSAGGIO MIO</div> -->
+              <!-- <div class="msg-all msg-other">MESSAGGIO ALTRO</div> -->
             </div>
 
             <!-- dove scriverò i nuovi messaggi -->
