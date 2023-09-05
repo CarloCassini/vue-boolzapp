@@ -29,6 +29,13 @@
       defer
     ></script>
 
+    <script
+      src="
+https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
+"
+      defer
+    ></script>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="./js/data.js" defer></script>
     <script src="./js/main.js" defer></script>
@@ -76,10 +83,9 @@
 
             <div class="Scorrimento">
               <!-- todo -->
-              <!-- v-show="user[index].name.includes(srcName)" -->
               <div v-for="(user,index) in contacts" @click="selectUser(index)">
                 <div
-                  v-if="user.name.includes(srcName)"
+                  v-if="user.name.toUpperCase().includes(srcName.toUpperCase())"
                   class="p-2 d-flex align-items-center contact-search"
                 >
                   <img
