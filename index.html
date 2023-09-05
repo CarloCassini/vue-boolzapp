@@ -50,7 +50,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
       <div class="row">
         <!-- visualizzazione contatti -->
         <!-- user mio -->
-        <div class="col-3">
+        <div class="col-3 p-0 todo">
           <div class="d-flex flex-column list-users">
             <div class="display-Zone d-flex align-items-center">
               <img src="img/avatar_io.jpg" class="round-icon p-1" alt="" />
@@ -75,25 +75,26 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
             </div>
 
             <!-- dove mettere la ricerca utente -->
-            <div class="input-group my-2" id="insert-new-msg">
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=" cerca utente "
-                aria-describedby="button-addon2"
-                v-model="srcName"
-              />
+            <div class="display-Zone">
+              <div class="input-group my-2" id="insert-new-msg">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=" cerca utente "
+                  aria-describedby="button-addon2"
+                  v-model="srcName"
+                />
+              </div>
             </div>
 
-            <div class="Scorrimento">
-              <!-- todo -->
+            <div class="display-zone Scorrimento flex-grow-1">
               <div
                 v-for="(user,index) in contacts"
                 @click="selectUser(index),  clearOptionMessage()"
@@ -125,11 +126,13 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
         </div>
 
         <!-- visualizzazione zona dei messaggi -->
-        <div class="col">
+        <div class="col-9 p-0 debug todo">
           <div class="d-flex flex-column list-users">
             <!-- testa della zona messaggi con user attivo-->
-            <div class="p-2">
-              <div class="display-Zone p-2 d-flex align-items-center">
+            <div class="debug display-Zone d-flex align-items-center">
+              <div
+                class="display-Zone p-2 d-flex align-items-center flex-grow-1"
+              >
                 <img
                   :src="contacts[activeContact].avatar.replace('.png','.jpg')"
                   class="round-icon"
@@ -171,7 +174,6 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                   <div @click="deleteMessage(index)">cancella</div>
                   <div>info</div>
                 </div>
-                <!-- todo -->
                 <div>{{ visibleMessage.date}}</div>
                 <div>{{ visibleMessage.message}}</div>
               </div>
