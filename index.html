@@ -135,7 +135,23 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                   class="round-icon"
                   alt=""
                 />
-                <div class="round-name">{{ contacts[activeContact].name}}</div>
+                <div class="round-name flex-grow-1 mx-2">
+                  <div>{{ contacts[activeContact].name}}</div>
+                  <div class="small-txt mx-0">
+                    {{
+                    contacts[activeContact].messages[findLast(contacts[activeContact])].date.substr(10,6)
+                    }}
+                  </div>
+                </div>
+                <div class="p-1 icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="p-1 icon">
+                  <i class="fa-solid fa-paperclip"></i>
+                </div>
+                <div class="p-1 icon">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
               </div>
             </div>
 
