@@ -32,6 +32,8 @@
   max-width: 70%;
   border-radius: 5px;
   padding: 5px;
+
+  position: relative;
 }
 
 .msg-mine {
@@ -50,13 +52,12 @@
   margin: 0 auto;
 }
 
-.user-icon {
+.round-icon {
   width: 50px;
   line-height: 50px;
   text-align: center;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: red;
 }
 
 .user-name {
@@ -78,8 +79,17 @@
 
 .msg-option {
   background-color: #009688;
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  z-index: 9;
+  padding: 5px;
 }
 
 .hide {
   display: none;
+}
+
+.note {
+  background-color: #8edafc;
 }

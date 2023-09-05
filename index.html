@@ -54,12 +54,17 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
           <div class="d-flex flex-column debug list-users">
             <div class="p-2">
               <div class="display-Zone p-2 d-flex align-items-center">
-                <img src="img/avatar_io.jpg" class="user-icon" alt="" />
+                <img src="img/avatar_io.jpg" class="round-icon" alt="" />
                 <div class="user-name">Carlo</div>
               </div>
             </div>
 
-            <div class="p-2 debug">zona con la parte azzurra</div>
+            <div class="p-2 note d-flex">
+              <div>campanella</div>
+              <div>
+                <div>a</div>
+              </div>
+            </div>
 
             <!-- dove mettere la ricerca utente -->
             <div class="input-group my-2" id="insert-new-msg">
@@ -90,10 +95,10 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                 >
                   <img
                     :src="user.avatar.replace('.png','.jpg')"
-                    class="user-icon"
+                    class="round-icon"
                     alt=""
                   />
-                  <!-- <div class="user-icon">faccia</div> -->
+                  <!-- <div class="round-icon">faccia</div> -->
                   <div class="user-name">{{ user.name}}</div>
                 </div>
               </div>
@@ -109,10 +114,10 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
               <div class="display-Zone p-2 d-flex align-items-center">
                 <img
                   :src="contacts[activeContact].avatar.replace('.png','.jpg')"
-                  class="user-icon"
+                  class="round-icon"
                   alt=""
                 />
-                <div class="user-name">{{ contacts[activeContact].name}}</div>
+                <div class="round-name">{{ contacts[activeContact].name}}</div>
               </div>
             </div>
 
@@ -123,10 +128,12 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                 v-for="(visibleMessage,index) in contacts[activeContact].messages"
                 class="msg-all"
                 :class="(visibleMessage.status=='sent')? 'msg-mine' : 'msg-other' "
-                @click="optionMessage()"
+                @click="optionMessage(index)"
               >
-                <div class="msg-option hide">non visto</div>
-                <div class="msg-option">
+                <div
+                  class="msg-option"
+                  v-if="optionMenu.show == true && optionMenu.indexDisplay == index "
+                >
                   <div>info</div>
                   <div>modifica</div>
                 </div>

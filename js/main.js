@@ -16,6 +16,11 @@ createApp({
         message: "",
         status: "",
       },
+
+      optionMenu: {
+        show: false,
+        indexDisplay: -1,
+      },
     };
   },
 
@@ -47,8 +52,12 @@ createApp({
       this.newMessage.status = "";
     },
 
-    optionMessage() {
-      console.log(visibleMessage.date);
+    optionMessage(index) {
+      console.log(this.optionMenu.show);
+      console.log(index);
+      this.optionMenu.show = true;
+      this.optionMenu.indexDisplay = index;
+      console.log(this.optionMenu.show);
     },
 
     deleteMessage() {},
