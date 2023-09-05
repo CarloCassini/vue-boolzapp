@@ -71,6 +71,20 @@ createApp({
       console.log(this.contacts[this.activeContact].messages[index]);
       this.contacts[this.activeContact].messages.splice(index, 1);
     },
+    findLast(user) {
+      let lunghezza = user.messages.length - 1;
+      console.log(user.messages);
+      while (user.messages[lunghezza].status == "sent" && lunghezza > 0) {
+        lunghezza = lunghezza - 1;
+        console.log(lunghezza);
+      }
+
+      if (lunghezza < 0) {
+        lunghezza = 0;
+      }
+      return lunghezza;
+      // user.messages.length()
+    },
     // inserire i metodi qui
   },
 

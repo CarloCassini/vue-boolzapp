@@ -46,23 +46,31 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
 
   <body class="background-page">
     <!-- questo div sarà di background -->
-    <div class="debug container app-display" id="app">
+    <div class="container app-display" id="app">
       <div class="row">
         <!-- visualizzazione contatti -->
         <!-- user mio -->
         <div class="col-3">
-          <div class="d-flex flex-column debug list-users">
-            <div class="p-2">
-              <div class="display-Zone p-2 d-flex align-items-center">
-                <img src="img/avatar_io.jpg" class="round-icon" alt="" />
-                <div class="user-name">Carlo</div>
+          <div class="d-flex flex-column list-users">
+            <div class="display-Zone d-flex align-items-center">
+              <img src="img/avatar_io.jpg" class="round-icon p-1" alt="" />
+              <div class="user-name flex-grow-1 p-1">Carlo</div>
+              <div class="p-1 icon">
+                <i class="fa-solid fa-circle-notch"></i>
               </div>
+              <div class="p-1 icon"><i class="fa-solid fa-message"></i></div>
+              <div class="p-1 icon"><i class="fa-solid fa-ellipsis"></i></div>
             </div>
 
-            <div class="p-2 note d-flex">
-              <div>campanella</div>
+            <div class="p-2 note d-flex align-items-center">
+              <div class="round-icon">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
               <div>
-                <div>a</div>
+                <div class="text-highlight">
+                  ricevi notifiche di nuovi messaggi
+                </div>
+                <div class="text-subtitle">attiva notifiche desktop</div>
               </div>
             </div>
 
@@ -73,7 +81,6 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                 type="button"
                 id="button-addon2"
               >
-                <!-- @keyup.enter="addTask()" -->
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               <input
@@ -83,7 +90,6 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                 aria-describedby="button-addon2"
                 v-model="srcName"
               />
-              <!-- @keyup.enter="addTask()" -->
             </div>
 
             <div class="Scorrimento">
@@ -101,8 +107,14 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                     class="round-icon"
                     alt=""
                   />
-                  <!-- <div class="round-icon">faccia</div> -->
-                  <div class="user-name">{{ user.name}}</div>
+                  <div>
+                    <div class="user-name">{{ user.name}}</div>
+                    <!-- dove mettere ora ultimo messaggio e ultimo messaggio inviato -->
+                    <div class="small-txt">
+                      {{ user.messages[findLast(user)].message.substr(0,10) +
+                      "..." }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +123,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
 
         <!-- visualizzazione zona dei messaggi -->
         <div class="col">
-          <div class="d-flex flex-column debug list-users">
+          <div class="d-flex flex-column list-users">
             <!-- testa della zona messaggi con user attivo-->
             <div class="p-2">
               <div class="display-Zone p-2 d-flex align-items-center">
@@ -125,7 +137,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
             </div>
 
             <!-- zona del display dei messaggi -->
-            <div class="my-2 p-2 Scorrimento debug">
+            <div class="my-2 p-2 Scorrimento">
               <!-- bisnoga mettere un controllo per l'utilizzo di msg-mine o msg-other -->
               <div
                 v-for="(visibleMessage,index) in contacts[activeContact].messages"

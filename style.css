@@ -43,7 +43,7 @@
 }
 
 .msg-other {
-  background-color: gainsboro;
+  background-color: rgb(158, 158, 158);
   margin-right: auto;
 }
 
@@ -60,13 +60,44 @@
   border-radius: 50%;
 }
 
+.note > .round-icon {
+  width: 30px;
+  line-height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.text-highlight {
+  margin: 0 5px;
+  font-size: small;
+}
+.text-subtitle {
+  margin: 0 5px;
+  color: #626250;
+  font-size: x-small;
+
+  text-decoration: underline;
+}
+.small-txt {
+  margin: 0 10px;
+  color: #626250;
+  font-size: x-small;
+}
+
 .user-name {
   margin: 0 10px;
   line-height: 20px;
 }
 
 .display-Zone {
-  background-color: gainsboro;
+  background-color: rgb(197, 197, 197);
+}
+.display-Zone > .icon {
+  color: #b1b1b1;
+  cursor: pointer;
 }
 
 .contact-active {
