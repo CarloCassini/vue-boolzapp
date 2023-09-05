@@ -53,14 +53,24 @@ createApp({
     },
 
     optionMessage(index) {
-      console.log(this.optionMenu.show);
-      console.log(index);
-      this.optionMenu.show = true;
-      this.optionMenu.indexDisplay = index;
-      console.log(this.optionMenu.show);
+      if (this.optionMenu.indexDisplay == index) {
+        this.optionMenu.show = false;
+        this.optionMenu.indexDisplay = -1;
+      } else {
+        this.optionMenu.show = true;
+        this.optionMenu.indexDisplay = index;
+      }
     },
 
-    deleteMessage() {},
+    clearOptionMessage() {
+      this.optionMenu.show = true;
+      this.optionMenu.indexDisplay = -1;
+    },
+
+    deleteMessage(index) {
+      console.log(this.contacts[this.activeContact].messages[index]);
+      this.contacts[this.activeContact].messages.splice(index, 1);
+    },
     // inserire i metodi qui
   },
 

@@ -88,7 +88,10 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
 
             <div class="Scorrimento">
               <!-- todo -->
-              <div v-for="(user,index) in contacts" @click="selectUser(index)">
+              <div
+                v-for="(user,index) in contacts"
+                @click="selectUser(index),  clearOptionMessage()"
+              >
                 <div
                   v-if="user.name.toUpperCase().includes(srcName.toUpperCase())"
                   class="p-2 d-flex align-items-center contact-search"
@@ -134,8 +137,8 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                   class="msg-option"
                   v-if="optionMenu.show == true && optionMenu.indexDisplay == index "
                 >
+                  <div @click="deleteMessage(index)">cancella</div>
                   <div>info</div>
-                  <div>modifica</div>
                 </div>
                 <!-- todo -->
                 <div>{{ visibleMessage.date}}</div>

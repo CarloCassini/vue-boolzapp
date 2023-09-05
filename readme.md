@@ -44,5 +44,5 @@ contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 ## Milestone 5 - opzionale
 
 ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
-permette di cancellare il messaggio selezionato
+permette di cancellare il messaggio selezionato (fatto)
 ● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
