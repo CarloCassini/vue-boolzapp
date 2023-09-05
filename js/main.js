@@ -6,7 +6,10 @@ createApp({
   data() {
     return {
       contacts: dataDoc,
+
       activeContact: 0,
+
+      srcName: "",
 
       newMessage: {
         date: new Date(),

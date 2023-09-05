@@ -61,8 +61,7 @@
                 type="button"
                 id="button-addon2"
               >
-                <!-- v-model="newMessage.message"
-              @keyup.enter="addTask()" -->
+                <!-- @keyup.enter="addTask()" -->
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               <input
@@ -70,23 +69,27 @@
                 class="form-control"
                 placeholder=" cerca utente "
                 aria-describedby="button-addon2"
+                v-model="srcName"
               />
               <!-- @keyup.enter="addTask()" -->
             </div>
 
             <div class="Scorrimento">
-              <div
-                v-for="(user,index) in contacts"
-                class="p-2 d-flex align-items-center contact-search"
-                @click="selectUser(index)"
-              >
-                <img
-                  :src="user.avatar.replace('.png','.jpg')"
-                  class="user-icon"
-                  alt=""
-                />
-                <!-- <div class="user-icon">faccia</div> -->
-                <div class="user-name">{{ user.name}}</div>
+              <!-- todo -->
+              <!-- v-show="user[index].name.includes(srcName)" -->
+              <div v-for="(user,index) in contacts" @click="selectUser(index)">
+                <div
+                  v-if="user.name.includes(srcName)"
+                  class="p-2 d-flex align-items-center contact-search"
+                >
+                  <img
+                    :src="user.avatar.replace('.png','.jpg')"
+                    class="user-icon"
+                    alt=""
+                  />
+                  <!-- <div class="user-icon">faccia</div> -->
+                  <div class="user-name">{{ user.name}}</div>
+                </div>
               </div>
             </div>
           </div>
