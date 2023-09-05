@@ -111,6 +111,9 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                     <div class="user-name">{{ user.name}}</div>
                     <!-- dove mettere ora ultimo messaggio e ultimo messaggio inviato -->
                     <div class="small-txt">
+                      {{ user.messages[findLast(user)].date.substr(10,6) }}
+                    </div>
+                    <div class="small-txt">
                       {{ user.messages[findLast(user)].message.substr(0,10) +
                       "..." }}
                     </div>
