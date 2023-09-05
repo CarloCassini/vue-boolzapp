@@ -123,13 +123,20 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                 v-for="(visibleMessage,index) in contacts[activeContact].messages"
                 class="msg-all"
                 :class="(visibleMessage.status=='sent')? 'msg-mine' : 'msg-other' "
+                @click="optionMessage()"
               >
+                <div class="msg-option hide">non visto</div>
+                <div class="msg-option">
+                  <div>info</div>
+                  <div>modifica</div>
+                </div>
+                <!-- todo -->
                 <div>{{ visibleMessage.date}}</div>
                 <div>{{ visibleMessage.message}}</div>
               </div>
 
               <!-- <div class="msg-all msg-mine">MESSAGGIO MIO</div> -->
-              <!-- <div class="msg-all msg-other">MESSAGGIO ALTRO</div> -->
+              <!-- <div class="msg-all msg-other">MESSAGGr 760IO ALTRO</div> -->
             </div>
 
             <!-- dove scriverò i nuovi messaggi -->

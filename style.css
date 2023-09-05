@@ -75,3 +75,11 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.msg-option {
+  background-color: #009688;
+}
+
+.hide {
+  display: none;
+}

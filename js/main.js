@@ -38,7 +38,6 @@ createApp({
       this.newMessage.status = "";
     },
     otherMsg() {
-      console.log("asdasd");
       this.newMessage.date = new Date();
       this.newMessage.message = "ok";
       this.newMessage.status = "received";
@@ -47,6 +46,12 @@ createApp({
       this.newMessage.message = "";
       this.newMessage.status = "";
     },
+
+    optionMessage() {
+      console.log(visibleMessage.date);
+    },
+
+    deleteMessage() {},
     // inserire i metodi qui
   },
 
