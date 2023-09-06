@@ -126,10 +126,10 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
         </div>
 
         <!-- visualizzazione zona dei messaggi -->
-        <div class="col-9 p-0 debug todo">
+        <div class="col-9 p-0 todo">
           <div class="d-flex flex-column list-users">
             <!-- testa della zona messaggi con user attivo-->
-            <div class="debug display-Zone d-flex align-items-center">
+            <div class="display-Zone d-flex align-items-center">
               <div
                 class="display-Zone p-2 d-flex align-items-center flex-grow-1"
               >
@@ -159,7 +159,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
             </div>
 
             <!-- zona del display dei messaggi -->
-            <div class="my-2 p-2 Scorrimento">
+            <div class="my-2 p-2 pb-5 Scorrimento">
               <!-- bisnoga mettere un controllo per l'utilizzo di msg-mine o msg-other -->
               <div
                 v-for="(visibleMessage,index) in contacts[activeContact].messages"
@@ -171,7 +171,7 @@ https://cdn.jsdelivr.net/npm/luxon@3.4.2/build/global/luxon.min.js
                   class="msg-option"
                   v-if="optionMenu.show == true && optionMenu.indexDisplay == index "
                 >
-                  <div @click="deleteMessage(index)">cancella</div>
+                  <div class="mb-1" @click="deleteMessage(index)">cancella</div>
                   <div>info</div>
                 </div>
                 <div>{{ visibleMessage.date}}</div>
